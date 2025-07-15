@@ -3,844 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>唐嘉琪的个人主页</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>唐嘉琪个人主页</title>
     <style>
-        :root {
-            --primary: #4a6fa5;
-            --secondary: #6b8cbe;
-            --accent: #e76f51;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --text: #212529;
-            --gray: #6c757d;
-            --transition: all 0.3s ease;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
         }
         
         body {
-            font-family: 'Noto Sans SC', sans-serif;
-            color: var(--text);
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            background-color: #f8f9fa;
+            color: #333;
             line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* 导航栏样式 */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-right: 10px;
-            color: var(--accent);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            font-size: 16px;
-            position: relative;
-            padding: 5px 0;
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* 英雄区域样式 */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(rgba(74, 111, 165, 0.8), rgba(107, 140, 190, 0.7)), url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3') no-repeat center/cover;
-            color: white;
-            text-align: center;
-            padding-top: 80px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
         
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #eaeaea;
             margin-bottom: 30px;
-            opacity: 0.9;
         }
         
-        .hero-btns {
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #eef2f7;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+            color: white;
+        }
+        
+        section {
+            margin: 50px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            color: #2c3e50;
+        }
+        
+        .content-block {
+            margin: 25px 0;
+        }
+        
+        .content-block h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2980b9;
+        }
+        
+        .content-block p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        .content-block ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        
+        .content-block li {
+            margin-bottom: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            margin: 50px 0 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info {
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .btn {
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            display: inline-block;
-            text-align: center;
-        }
-        
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-            border: 2px solid var(--accent);
-        }
-        
-        .btn-primary:hover {
-            background: transparent;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
-        
-        /* 内容区域样式 */
-        section {
-            padding: 100px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-        }
-        
-        .section-title h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        
-        .section-content {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            margin-bottom: 30px;
-        }
-        
-        /* 个人介绍样式 */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .profile-img {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .profile-img img {
-            width: 100%;
-            display: block;
-            transition: var(--transition);
-        }
-        
-        .profile-img:hover img {
-            transform: scale(1.05);
-        }
-        
-        .about-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-        
-        .about-content p {
-            margin-bottom: 15px;
-            color: var(--gray);
-        }
-        
-        .skills {
-            display: flex;
+            margin-top: 15px;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
         }
         
-        .skill {
-            background: var(--light);
-            padding: 8px 15px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            color: var(--primary);
-            font-weight: 500;
-        }
-        
-        /* 有趣的内容样式 */
-        .interests-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .interest-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: var(--transition);
-        }
-        
-        .interest-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-        }
-        
-        .interest-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .interest-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .interest-card:hover .interest-img img {
-            transform: scale(1.1);
-        }
-        
-        .interest-content {
-            padding: 25px;
-        }
-        
-        .interest-content h3 {
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        
-        .interest-content p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-        
-        /* 作品集样式 */
-        .portfolio-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .portfolio-item {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: var(--transition);
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-        }
-        
-        .portfolio-img {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .portfolio-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .portfolio-item:hover .portfolio-img img {
-            transform: scale(1.1);
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(74, 111, 165, 0.85);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition);
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-        
-        .portfolio-overlay a {
-            color: white;
-            font-size: 2rem;
-            margin: 0 10px;
-            transition: var(--transition);
-        }
-        
-        .portfolio-overlay a:hover {
-            color: var(--accent);
-            transform: translateY(-5px);
-        }
-        
-        .portfolio-content {
-            padding: 25px;
-        }
-        
-        .portfolio-content h3 {
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        
-        .portfolio-content p {
-            color: var(--gray);
-        }
-        
-        /* 其他安排样式 */
-        .schedule-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .schedule-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: var(--transition);
-            text-align: center;
-        }
-        
-        .schedule-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-        }
-        
-        .schedule-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: var(--accent);
-            font-size: 1.8rem;
-        }
-        
-        .schedule-card h3 {
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        
-        .schedule-card p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-        
-        /* 页脚样式 */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.4rem;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background: var(--accent);
-            bottom: 0;
-            left: 0;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-links a {
-            color: #adb5bd;
+        .contact-info a {
+            color: #3498db;
             text-decoration: none;
-            transition: var(--transition);
         }
         
-        .footer-links a:hover {
-            color: var(--accent);
-            padding-left: 5px;
+        .contact-info a:hover {
+            text-decoration: underline;
         }
         
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            transition: var(--transition);
-        }
-        
-        .social-links a:hover {
-            background: var(--accent);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #adb5bd;
-            font-size: 0.9rem;
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1fr;
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
             }
             
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
+            h1 {
+                font-size: 2.2rem;
             }
             
             section {
-                padding: 70px 0;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
+                padding: 15px;
             }
             
-            .section-content {
-                padding: 25px;
+            nav {
+                gap: 8px;
+            }
+            
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
     <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <i class="fas fa-star"></i>唐嘉琪
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#about">个人介绍</a></li>
-                    <li><a href="#interests">有趣的内容</a></li>
-                    <li><a href="#portfolio">作品</a></li>
-                    <li><a href="#schedule">其他安排</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>唐嘉琪个人主页</h1>
+        <p class="subtitle">设计师 · 开发者 · 终身学习者</p>
     </header>
-
-    <!-- 英雄区域 -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>唐嘉琪的个人主页</h1>
-            <p>设计师 • 开发者 • 创意思想家</p>
-            <div class="hero-btns">
-                <a href="#about" class="btn btn-primary">了解更多</a>
-                <a href="#contact" class="btn btn-secondary">联系我</a>
-            </div>
+    
+    <nav>
+        <a href="#about">个人介绍</a>
+        <a href="#interests">有趣的内容</a>
+        <a href="#portfolio">作品集</a>
+        <a href="#schedule">其他安排</a>
+    </nav>
+    
+    <section id="about">
+        <h2>个人介绍</h2>
+        
+        <div class="content-block">
+            <h3>关于我</h3>
+            <p>你好，我是唐嘉琪，一名充满热情的UI/UX设计师和前端开发工程师。拥有5年行业经验，专注于创建直观、用户友好的数字体验。</p>
+            <p>我相信优秀的设计不仅需要美观，更需要解决实际问题。在清华大学设计学院获得学士学位后，我一直在探索技术与艺术的交汇点。</p>
+        </div>
+        
+        <div class="content-block">
+            <h3>专业技能</h3>
+            <ul>
+                <li>UI/UX设计：用户研究、交互设计、原型制作</li>
+                <li>前端开发：HTML/CSS, JavaScript, React框架</li>
+                <li>设计工具：Figma, Adobe Creative Suite, Sketch</li>
+                <li>响应式设计：确保在各种设备上的完美体验</li>
+                <li>用户体验测试与优化</li>
+            </ul>
+        </div>
+        
+        <div class="content-block">
+            <h3>工作经历</h3>
+            <p><strong>高级UI设计师 | 创新科技有限公司 (2020-至今)</strong></p>
+            <p>负责公司核心产品的用户体验设计，主导了两次重大界面改版，用户满意度提升35%。</p>
+            
+            <p><strong>前端开发工程师 | 数字解决方案公司 (2018-2020)</strong></p>
+            <p>参与开发了多个企业级Web应用，优化了前端性能，页面加载时间减少40%。</p>
         </div>
     </section>
-
-    <!-- 个人介绍部分 -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>个人介绍</h2>
-            </div>
-            <div class="section-content">
-                <div class="about-grid">
-                    <div class="profile-img">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="唐嘉琪">
-                    </div>
-                    <div class="about-content">
-                        <h3>你好，我是唐嘉琪！</h3>
-                        <p>我是一名充满激情的UI/UX设计师和前端开发人员，拥有5年行业经验。我专注于创建直观、美观且用户友好的数字体验。</p>
-                        <p>毕业于清华大学设计学院，我热衷于将艺术美学与技术实现完美结合。我的设计理念是"形式追随功能"，同时注重细节和用户体验。</p>
-                        <p>在业余时间，我喜欢摄影、旅行和探索新科技。我相信持续学习和创新是个人成长的关键。</p>
-                        <div class="skills">
-                            <span class="skill">UI/UX 设计</span>
-                            <span class="skill">前端开发</span>
-                            <span class="skill">响应式设计</span>
-                            <span class="skill">品牌设计</span>
-                            <span class="skill">用户研究</span>
-                            <span class="skill">交互设计</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
+    <section id="interests">
+        <h2>有趣的内容</h2>
+        
+        <div class="content-block">
+            <h3>摄影与视觉艺术</h3>
+            <p>摄影是我观察世界的方式。我特别喜欢街头摄影和自然风光，用镜头捕捉那些转瞬即逝的瞬间。</p>
+            <p>最近在探索长曝光摄影技术，尝试用不同的快门速度创造独特的视觉效果。</p>
+        </div>
+        
+        <div class="content-block">
+            <h3>咖啡文化探索</h3>
+            <p>从咖啡豆的烘焙到冲泡技巧，我沉迷于咖啡制作的每个环节。自己在家烘焙咖啡豆，尝试不同产地的风味特点。</p>
+            <p>最喜欢的咖啡豆：埃塞俄比亚耶加雪菲，带有明显的柑橘和茉莉花香。</p>
+        </div>
+        
+        <div class="content-block">
+            <h3>城市徒步与探索</h3>
+            <p>每到一个新城市，我最喜欢的方式是用脚步丈量它。发现隐藏的小巷、独立书店和当地美食。</p>
+            <p>已探索城市：北京、上海、东京、京都、柏林、巴塞罗那。</p>
         </div>
     </section>
-
-    <!-- 有趣的内容部分 -->
-    <section id="interests" class="interests">
-        <div class="container">
-            <div class="section-title">
-                <h2>有趣的内容</h2>
-            </div>
-            <div class="interests-container">
-                <div class="interest-card">
-                    <div class="interest-img">
-                        <img src="https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="旅行摄影">
-                    </div>
-                    <div class="interest-content">
-                        <h3>旅行摄影</h3>
-                        <p>用镜头捕捉世界各地的美景和文化瞬间。从喜马拉雅山脉到撒哈拉沙漠，我的足迹遍布30多个国家。</p>
-                        <a href="#" class="btn btn-primary">查看相册</a>
-                    </div>
-                </div>
-                
-                <div class="interest-card">
-                    <div class="interest-img">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="咖啡文化">
-                    </div>
-                    <div class="interest-content">
-                        <h3>咖啡文化探索</h3>
-                        <p>从咖啡豆的起源到现代咖啡艺术，我热衷于探索咖啡的世界。自己烘焙咖啡豆，体验从种子到杯子的完整过程。</p>
-                        <a href="#" class="btn btn-primary">阅读文章</a>
-                    </div>
-                </div>
-                
-                <div class="interest-card">
-                    <div class="interest-img">
-                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="烹饪艺术">
-                    </div>
-                    <div class="interest-content">
-                        <h3>烹饪艺术</h3>
-                        <p>将烹饪视为一种艺术形式，探索不同文化的烹饪技巧和美食哲学。特别是对亚洲融合料理有深入研究。</p>
-                        <a href="#" class="btn btn-primary">查看食谱</a>
-                    </div>
-                </div>
-            </div>
+    
+    <section id="portfolio">
+        <h2>作品集</h2>
+        
+        <div class="content-block">
+            <h3>健康生活移动应用</h3>
+            <p>一款帮助用户追踪健康习惯、管理饮食和制定健身计划的应用程序。</p>
+            <p>负责整个产品的用户体验设计和界面开发。应用上线三个月内获得10万+下载量，用户平均使用时长提升50%。</p>
+        </div>
+        
+        <div class="content-block">
+            <h3>企业知识管理平台</h3>
+            <p>为企业设计的内部知识共享和文档管理系统。</p>
+            <p>简化了复杂的信息架构，设计了直观的导航系统，使员工查找信息的时间减少60%。</p>
+        </div>
+        
+        <div class="content-block">
+            <h3>电子商务网站重构</h3>
+            <p>对现有电商平台进行全面的用户体验优化和界面更新。</p>
+            <p>重新设计了产品展示页面和购物流程，转化率提高22%，客户满意度评分从3.8提升到4.6。</p>
         </div>
     </section>
-
-    <!-- 作品集部分 -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>作品集</h2>
-            </div>
-            <div class="portfolio-container">
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="移动应用设计">
-                        <div class="portfolio-overlay">
-                            <a href="#"><i class="fas fa-search-plus"></i></a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>健康生活移动应用</h3>
-                        <p>一款帮助用户追踪健康习惯、管理饮食和制定健身计划的应用程序。注重用户体验和视觉美感。</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="企业网站设计">
-                        <div class="portfolio-overlay">
-                            <a href="#"><i class="fas fa-search-plus"></i></a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>科技公司品牌重塑</h3>
-                        <p>为一家创新科技公司进行的全面品牌重塑项目，包括网站设计、品牌标识和营销材料。</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="电子商务平台">
-                        <div class="portfolio-overlay">
-                            <a href="#"><i class="fas fa-search-plus"></i></a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>时尚电商平台</h3>
-                        <p>为高端时尚品牌设计的电子商务平台，注重产品展示和流畅的购物体验。</p>
-                    </div>
-                </div>
-            </div>
+    
+    <section id="schedule">
+        <h2>其他安排</h2>
+        
+        <div class="content-block">
+            <h3>近期活动</h3>
+            <ul>
+                <li>9月15日 - 北京设计大会 (演讲嘉宾)</li>
+                <li>10月3-5日 - 上海前端开发者大会</li>
+                <li>11月12日 - 线上UI设计工作坊 (主讲人)</li>
+                <li>12月1日 - 设计思维研讨会</li>
+            </ul>
+        </div>
+        
+        <div class="content-block">
+            <h3>学习计划</h3>
+            <ul>
+                <li>完成高级交互设计课程 (预计10月结课)</li>
+                <li>学习Three.js进行3D网页开发</li>
+                <li>深入研究无障碍设计原则</li>
+                <li>提升数据可视化技能</li>
+            </ul>
+        </div>
+        
+        <div class="content-block">
+            <h3>旅行计划</h3>
+            <ul>
+                <li>10月下旬：云南大理，摄影采风</li>
+                <li>12月：北海道，雪景摄影与文化体验</li>
+                <li>明年3月：意大利，文艺复兴艺术之旅</li>
+            </ul>
         </div>
     </section>
-
-    <!-- 其他安排部分 -->
-    <section id="schedule" class="schedule">
-        <div class="container">
-            <div class="section-title">
-                <h2>其他安排</h2>
-            </div>
-            <div class="schedule-container">
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>近期活动</h3>
-                    <p>10月15日 - 设计创新研讨会（上海）</p>
-                    <p>11月3日 - 前端开发技术分享会（线上）</p>
-                    <p>12月8日 - 创意设计展览（北京）</p>
-                </div>
-                
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3>学习计划</h3>
-                    <p>完成高级交互设计课程</p>
-                    <p>学习3D建模与动画技术</p>
-                    <p>深入研究人工智能在设计中的应用</p>
-                </div>
-                
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <h3>旅行计划</h3>
-                    <p>9月：日本京都文化探索</p>
-                    <p>明年1月：北欧极光摄影之旅</p>
-                    <p>明年6月：意大利艺术与建筑之旅</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>关于我</h3>
-                    <p>充满热情的设计师和开发者，致力于创造有意义且引人入胜的数字体验。</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-weixin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>快速链接</h3>
-                    <ul class="footer-links">
-                        <li><a href="#about">个人介绍</a></li>
-                        <li><a href="#interests">有趣的内容</a></li>
-                        <li><a href="#portfolio">作品集</a></li>
-                        <li><a href="#schedule">其他安排</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>联系方式</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> tangjiaqi@example.com</li>
-                        <li><i class="fas fa-phone"></i> +86 138 8888 8888</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 北京市海淀区</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 唐嘉琪个人主页. 保留所有权利</p>
-            </div>
+    
+    <footer>
+        <p>© 2023 唐嘉琪个人主页</p>
+        <div class="contact-info">
+            <a href="mailto:tangjiaqi@example.com">邮箱: tangjiaqi@example.com</a>
+            <a href="#">微信: tangjiaqi_design</a>
+            <a href="https://github.com/tangjiaqi">GitHub: github.com/tangjiaqi</a>
         </div>
     </footer>
-
-    <script>
-        // 简单的滚动效果
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-            
-            // 滚动时改变导航栏样式
-            window.addEventListener('scroll', function() {
-                const header = document.querySelector('header');
-                if (window.scrollY > 100) {
-                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-                    header.style.background = 'rgba(255, 255, 255, 0.98)';
-                } else {
-                    header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
